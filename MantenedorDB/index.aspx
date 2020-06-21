@@ -10,7 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-
+            <h1>Mantenedor Personas</h1>
+            <asp:Panel ID="Panel1" runat="server">
+                <a href="ingresar.aspx">Ingresar</a> | <a href="editar.aspx">Modificar</a> | <a href="eliminar.aspx">Eliminar</a> | <a href="index.aspx">Listar</a></asp:Panel>
+            <br />
+            <asp:GridView ID="grilla" runat="server"></asp:GridView>
         </div>
     </form>
 </body>
