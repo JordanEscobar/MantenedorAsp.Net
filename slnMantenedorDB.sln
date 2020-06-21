@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenedorDB", "MantenedorDB\MantenedorDB.csproj", "{EAE1EE0C-28CC-4C7A-A35D-1085DA866911}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{FE8D62FD-0632-4165-BB89-89196F54FE7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{31FA5EDF-699F-4161-BB82-9ED9627DB6B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EAE1EE0C-28CC-4C7A-A35D-1085DA866911}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE1EE0C-28CC-4C7A-A35D-1085DA866911}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE1EE0C-28CC-4C7A-A35D-1085DA866911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8D62FD-0632-4165-BB89-89196F54FE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8D62FD-0632-4165-BB89-89196F54FE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8D62FD-0632-4165-BB89-89196F54FE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8D62FD-0632-4165-BB89-89196F54FE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FA5EDF-699F-4161-BB82-9ED9627DB6B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FA5EDF-699F-4161-BB82-9ED9627DB6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FA5EDF-699F-4161-BB82-9ED9627DB6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FA5EDF-699F-4161-BB82-9ED9627DB6B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
