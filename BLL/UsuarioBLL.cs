@@ -32,5 +32,48 @@ namespace BLL
             }
             return false;
         }
+
+        public bool Eliminar()
+        {
+            mantenedorDBEntities modelo = new mantenedorDBEntities();
+            usuario u = modelo.usuario.FirstOrDefault(us=> us.id == this.id);
+            if (u.id == this.id)
+            {
+                modelo.usuario.Remove(u);
+                modelo.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool Editar()
+        {
+            mantenedorDBEntities modelo = new mantenedorDBEntities();
+            usuario u = modelo.usuario.FirstOrDefault(us=>us.id == this.id);
+            if (u.id == this.id)
+            {
+                u.nombre = this.nombre;
+                u.sexo = this.sexo;
+                u.edad = this.edad;
+                modelo.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool Buscar()
+        {
+            mantenedorDBEntities modelo = new mantenedorDBEntities();
+            usuario u = modelo.usuario.FirstOrDefault(us=>us.id == this.id);
+            if (u.id == this.id)
+            {
+                this.id = u.id;
+                this.nombre = u.nombre;
+                this.sexo = u.sexo;
+                this.edad = u.edad;
+                return true;
+            }
+            return false;
+        }
     }
 }
