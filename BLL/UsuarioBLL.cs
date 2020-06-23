@@ -52,6 +52,7 @@ namespace BLL
             usuario u = modelo.usuario.FirstOrDefault(us=>us.id == this.id);
             if (u.id == this.id)
             {
+                u.id = this.id;
                 u.nombre = this.nombre;
                 u.sexo = this.sexo;
                 u.edad = this.edad;
