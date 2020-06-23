@@ -21,17 +21,26 @@ namespace MantenedorDB
             usuario.id =int.Parse(ddlseleccionar.SelectedValue);
             if (usuario.Buscar())
             {
-                lblnombre.Text = usuario.nombre;
+                lblnombre.Text = usuario.nombre + " Edad: "+ usuario.edad + " Sexo: "+ usuario.sexo;
             }
         }
 
         protected void btneliminar_Click(object sender, EventArgs e)
         {
-            UsuarioBLL usuario = new UsuarioBLL();
-            usuario.id = int.Parse(ddlseleccionar.SelectedValue);
-            if (usuario.Eliminar())
+            try
             {
-                Response.Write("<script>alert('Se a eliminado correctamente')</script>");
+                UsuarioBLL usuario = new UsuarioBLL();
+                usuario.id = int.Parse(ddlseleccionar.SelectedValue);
+                if (usuario.Eliminar())
+                {
+                    Response.Write("<script>alert('Se a eliminado correctamente');" +
+                        "window.location='index.aspx';</script>");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

@@ -4,8 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Ingresar Usuario</title>
     <style type="text/css">
         .auto-style1 {
             width: 147px;
@@ -14,11 +15,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="jumbotron">
             <h1>Ingresar Usuario</h1>
             <br />
             <asp:Panel ID="Panel1" runat="server">
-                <a href="index.aspx">volver</a></asp:Panel>
+                <a class="btn btn-secondary" href="index.aspx">volver</a></asp:Panel>
             <table style="width: 100%;">
                 <tr>
                     <td class="auto-style1">Nombre</td>
@@ -41,14 +42,14 @@
                 <tr>
                     <td class="auto-style1">Edad</td>
                     <td>
-                        <asp:TextBox ID="txtedad" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtedad" runat="server" TextMode="Number"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">&nbsp;</td>
                     <td>
-                        <asp:Button ID="btnregistrar" runat="server" Text="Registrar" OnClick="btnregistrar_Click" />
+                        <asp:Button ID="btnregistrar" runat="server" CssClass="btn btn-success" Text="Registrar" OnClick="btnregistrar_Click" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>

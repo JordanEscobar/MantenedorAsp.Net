@@ -5,18 +5,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Mantenedor Asp.net</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+<title>Mantenedor Asp.net</title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="jumbotron">
             <h1>Mantenedor Personas</h1>
             <asp:Panel ID="Panel1" runat="server">
-                <a href="ingresar.aspx">Ingresar</a> | <a href="editar.aspx">Modificar</a> | <a href="eliminar.aspx">Eliminar</a> | <a href="index.aspx">Listar</a></asp:Panel>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-secondary" href="ingresar.aspx">Ingresar</a>
+                    <a class="btn btn-secondary" href="editar.aspx">Modificar</a>
+                    <a class="btn btn-secondary" href="eliminar.aspx">Eliminar</a>
+                </div>
+            </asp:Panel>
             <br />
-            <asp:GridView ID="grilla" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="grilla" CssClass="table table-striped table-dark" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
                 <Columns>
-                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" Visible="False" />
                     <asp:BoundField DataField="NOMBRE" HeaderText="NOMBRE" SortExpression="NOMBRE" />
                     <asp:BoundField DataField="SEXO" HeaderText="SEXO" SortExpression="SEXO" />
                     <asp:BoundField DataField="EDAD" HeaderText="EDAD" SortExpression="EDAD" />

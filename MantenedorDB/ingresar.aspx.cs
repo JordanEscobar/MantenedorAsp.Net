@@ -19,13 +19,22 @@ namespace MantenedorDB
 
         protected void btnregistrar_Click(object sender, EventArgs e)
         {
-            UsuarioBLL u = new UsuarioBLL();
-            u.nombre = txtnombre.Text;
-            u.sexo = ddlsexo.SelectedValue;
-            u.edad = int.Parse(txtedad.Text);
-            if (u.Ingresar())
+            try
             {
-                Response.Write("<script>alert('Usuario Agregado')</script>");
+                UsuarioBLL u = new UsuarioBLL();
+                u.nombre = txtnombre.Text;
+                u.sexo = ddlsexo.SelectedValue;
+                u.edad = int.Parse(txtedad.Text);
+                if (u.Ingresar())
+                {
+                    Response.Write("<script>alert('Usuario Agregado');" +
+                        "window.location='index.aspx';</script>");
+                }
+            }
+            catch (Exception)
+            {
+
+                Response.Write("<script>alert('ERROR')</script>");
             }
 
         }

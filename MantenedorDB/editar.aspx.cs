@@ -29,14 +29,23 @@ namespace MantenedorDB
 
         protected void btneditar_Click(object sender, EventArgs e)
         {
-            UsuarioBLL u = new UsuarioBLL();
-            u.id = int.Parse(ddlnombres.SelectedValue);
-            u.nombre = txtnombre.Text;
-            u.edad = int.Parse(txtedad.Text);
-            u.sexo = ddlsexo.SelectedValue;
-            if (u.Editar())
+            try
             {
-                Response.Write("<script>alert('usuario modificado')</script>");
+                UsuarioBLL u = new UsuarioBLL();
+                u.id = int.Parse(ddlnombres.SelectedValue);
+                u.nombre = txtnombre.Text;
+                u.edad = int.Parse(txtedad.Text);
+                u.sexo = ddlsexo.SelectedValue;
+                if (u.Editar())
+                {
+                    Response.Write("<script>alert('usuario modificado');" +
+                        "window.location='index.aspx';</script>");
+                }
+            }
+            catch (Exception)
+            {
+
+                Response.Write("<script>alert('ERROR')</script>");
             }
         }
     }

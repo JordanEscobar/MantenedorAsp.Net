@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+
     <title>Eliminar usuario</title>
     <style type="text/css">
         .auto-style1 {
@@ -17,11 +19,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="jumbotron">
             <h1>Eliminar Usuario</h1>
             <br />
             <asp:Panel ID="Panel1" runat="server">
-                <a href="index.aspx">volver</a></asp:Panel>
+                <a class="btn btn-secondary" href="index.aspx">volver</a></asp:Panel>
             <table style="width: 100%;">
                 <tr>
                     <td class="auto-style1">Seleccionar</td>
@@ -31,7 +33,7 @@
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mantenedorDBConnectionString %>" SelectCommand="SELECT * FROM [usuario]"></asp:SqlDataSource>
                     </td>
                     <td>
-                        <asp:Button ID="btnseleccion" runat="server" Text="Seleccionar" OnClick="btnseleccion_Click" />
+                        <asp:Button ID="btnseleccion" CssClass="btn btn-primary" runat="server" Text="Seleccionar" OnClick="btnseleccion_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -45,7 +47,7 @@
                     <td class="auto-style1">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
                     <td>
-                        <asp:Button ID="btneliminar" runat="server" Text="Eliminar" OnClick="btneliminar_Click" />
+                        <asp:Button ID="btneliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" OnClick="btneliminar_Click" />
                     </td>
                 </tr>
             </table>
